@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monthly Task</title>
+    <style>
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fff;
+    color: #333;
+    margin: 0;
+    padding: 20px;
+}
+
+h1 {
+    font-size: 2rem;
+    text-align: center;
+    color: #4CAF50;
+    margin-bottom: 1rem;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    margin: 0.5rem 0;
+}
+
+a {
+    text-decoration: none;
+    color: #007BFF;
+}
+
+a:hover {
+    color: #0056b3;
+}
+    </style>
+</head>
+<body>
+    <h1>My Monthly Plan</h1> <br>
+    <ul>
+    {% for key in keys %}
+   <li> <a href= "/{{key}}"> {{ key|title }} </a> </li>
+    {% endfor %} 
+    </ul>
+</body>
+</html>
