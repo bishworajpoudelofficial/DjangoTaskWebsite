@@ -5,46 +5,77 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Monthly Task</title>
     <style>
-body {
-    font-family: Arial, sans-serif;
-    background-color: #fff;
-    color: #333;
-    margin: 0;
-    padding: 20px;
+        h1{
+            background-color: green;
+            color: white;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            padding: 10px;
+            border-radius: 10px;
+        }
+        #months{
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 18px;
+            color: green;
+            padding-left: 5px;
+        }   
+        ul{
+            list-style: none;
+            padding: 0;
+        }
+
+        ul li {
+            align-items: center;
+    display: inline-block;
+    margin-right: 10px;
+    margin-bottom: 35px;
+    padding: 5px;
+    width: 150px; /* Fixed width for list items */
+    height: 60px; /* Fixed height for list items */
 }
 
-h1 {
-    font-size: 2rem;
-    text-align: center;
-    color: #4CAF50;
-    margin-bottom: 1rem;
-}
-
-ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-li {
-    margin: 0.5rem 0;
-}
-
-a {
+li a {
     text-decoration: none;
-    color: #007BFF;
+    background-color: green;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    display: flex; /* Added for centering text */
+    align-items: center; /* Vertical center */
+    justify-content: center; /* Horizontal center */
+    width: 100%; /* Take full width of parent li */
+    height: 100%; /* Take full height of parent li */
+    box-sizing: border-box; /* Include padding in width/height */
+    white-space: nowrap; /* Prevent text wrapping */
 }
 
-a:hover {
-    color: #0056b3;
+li a:hover{
+    background-color: darkgreen;
 }
+        footer{
+            background-color: green;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        footer a{
+            color: white;
+            text-decoration: none;
+        }
     </style>
 </head>
 <body>
-    <h1>My Monthly Plan</h1> <br>
+    <h1>My Monthly Plan</h1> 
+    <p id="months">Choose a month</p>
     <ul>
     {% for key in keys %}
    <li> <a href= "/{{key}}"> {{ key|title }} </a> </li>
     {% endfor %} 
     </ul>
+    <footer>
+        <p>Developed by: <a href="https://brp.com.np">Bishworaj Poudel</a></p>
+    </footer>
 </body>
 </html>
